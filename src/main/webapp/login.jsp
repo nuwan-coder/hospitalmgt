@@ -60,7 +60,7 @@
           <div class="col-lg-7 px-5 pt-5 pb-5">
             <h1 class="font-weight-bold py-3">ABC HOSPITAL</h1>
             <h4>Sign into your account</h4>
-            <form>
+            <form method="post">
               <div class="form-row">
                 <div class="col-lg-7">
                   <input type="text" name="userName" class="form-control my-3 py-2" placeholder="Admin123">
