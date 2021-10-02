@@ -87,7 +87,9 @@
               </div>
               <div class="form-row mb-3">
                 <div class="col-lg-7">
+                  <% if(request.getParameter("msg") != null) { %>
                   <span class="font-weight-bold"><%= request.getParameter("msg") %></span>
+                  <% } %>
                 </div>
               </div>
             </form>
