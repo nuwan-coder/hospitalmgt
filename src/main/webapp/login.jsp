@@ -1,3 +1,4 @@
+<%@page import="java.io.Writer"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!doctype html>
@@ -44,6 +45,9 @@
         color: black;
         border: 1px solid;
       }
+      span{
+      	color: red;
+      }
     </style>
   </head>
   <body>
@@ -60,7 +64,7 @@
           <div class="col-lg-7 px-5 pt-5 pb-5">
             <h1 class="font-weight-bold py-3">ABC HOSPITAL</h1>
             <h4>Sign into your account</h4>
-            <form method="post">
+            <form method="post" action="loginController">
               <div class="form-row">
                 <div class="col-lg-7">
                   <input type="text" name="userName" class="form-control my-3 py-2" placeholder="Admin123">
@@ -73,12 +77,19 @@
               </div>
               <div class="form-row">
                 <div class="col-lg-7">
-                  <button type="button" class="btn1 mb-2 mt-3">Login</button>
+                  <button type="submit" class="btn1 mb-2 mt-3">Login</button>
                 </div>
               </div>
               <div class="form-row mb-3">
                 <div class="col-lg-7">
                   <a href="#" >Forget password?</a>
+                </div>
+              </div>
+              <div class="form-row mb-3">
+                <div class="col-lg-7">
+                  <% if(request.getParameter("msg") != null) { %>
+                  <span class="font-weight-bold"><%= request.getParameter("msg") %></span>
+                  <% } %>
                 </div>
               </div>
             </form>
